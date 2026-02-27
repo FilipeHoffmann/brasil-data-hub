@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary: #1f513a;
+    --primary-hover: #549b7a;
+    --background: #f9fafa;
+    --background-secondary: rgba(238, 241, 240, 0.3);
+    --foreground: #131c20;
+    --font-dm: "DM Sans", sans-serif;
+    --font-space: "Space Grotesk", sans-serif;
+}
+
+body {
+    font-family: var(--font-dm);
+    background-color: var(--background);
+}
+
+/* Cabeçalho */
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eeeeee;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-space);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.icon {
+    background-color: var(--primary);
+    padding: 8px;
+    border-radius: 6px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+}
+
+.nav-links .button-secondary::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--foreground);
+    transition: width 0.3s ease;
+}
+
+.nav-links .button-secondary:hover::after {
+    width: 100%;
+}
+
+.nav-links .button-secondary:hover {
+    color: rgb(0, 0, 0);
+}
+
+.nav-links .button-primary {
+    padding: 10px 16px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.nav-links .button-primary:hover {
+    animation: changeBackgroundColor 0.2s ease-in-out forwards;
+}
+
+@keyframes changeBackgroundColor {
+    from {
+        background-color: var(--primary);
+    }
+    to {
+        background-color: var(--primary-hover);
+    }
+}
+
+/* Conteúdo Principal */
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Seção de Hero */
+.hero-container {
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    border-bottom: 1px solid #eeeeee;
+    /* Fundo com padrão de pontos */
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+.hero-content {
+    max-width: 400px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: var(--foreground);
+    font-family: var(--font-space);
+    line-height: 1;
+}
+
+.hero-content h1 #green-text {
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--foreground);
+    margin-top: 10px;
+}
+
+.hero-content .buttons-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-content .buttons-container a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-content .buttons-container .button-primary {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    gap: 5px;
+}
+
+.hero-content .buttons-container .button-primary:hover {
+    animation: changeBackgroundColor 0.2s ease-in-out forwards;
+}
+
+.hero-content .buttons-container .button-secondary {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+}
+
+.hero-content .buttons-container .button-secondary::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--foreground);
+    transition: width 0.3s ease;
+}
+
+.hero-content .buttons-container .button-secondary:hover::after {
+    width: 100%;
+}
+
+/* Seção o que é */
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background-color: var(--background-secondary);
+}
+
+/* Rodapé */
+.footer-bottom {
+    font-size: 12px;
+    color: var(--foreground);
+    text-align: center;
+    padding: 20px;
+}
