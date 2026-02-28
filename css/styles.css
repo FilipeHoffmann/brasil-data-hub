@@ -20,7 +20,7 @@ body {
 
 header {
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
     justify-content: space-between;
     align-items: center;
@@ -261,4 +261,25 @@ main {
     100% {
         transform: translateY(0px);
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .buttons-container {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    #mapa {
+        width: 100%;
+        max-width: 400px;
+    }
+    
 }
