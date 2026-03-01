@@ -101,7 +101,7 @@
 .card-content {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
 }
 
 .card-content h3 {
