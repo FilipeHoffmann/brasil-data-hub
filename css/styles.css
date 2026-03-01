@@ -5,8 +5,11 @@
     --primary: #1f513a;
     --primary-hover: #549b7a;
     --background: #f9fafa;
-    --background-secondary: rgba(238, 241, 240, 0.3);
+    --background-secondary: #eef1f04d;
+    --border: #eef1f0;
     --foreground: #131c20;
+    --foreground-light: #5d6264;
+    --cinza-claro: #e9e9e9;
     --font-dm: "DM Sans", sans-serif;
     --font-space: "Space Grotesk", sans-serif;
 }
@@ -25,7 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--border);
     backdrop-filter: blur(10px);
     width: 100%;
     z-index: 1000;
@@ -116,7 +119,7 @@ main {
     justify-content: center;
     padding: 40px;
     gap: 40px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--border);
     /* Fundo com padrão de pontos */
     background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 1px, transparent 0);
     background-size: 20px 20px;
@@ -200,6 +203,8 @@ main {
 #mapa {
     width: 500px;
     display: block;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .map-overlay {
@@ -280,6 +285,93 @@ main {
     #mapa {
         width: 100%;
         max-width: 400px;
+    }   
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px;
     }
-    
+
+    header .logo {
+        font-size: 10px;
+    }
+
+    header .nav-links {
+        font-size: 12px;
+    }
+}
+
+/* about */
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--background-secondary);
+}
+
+.about-container h2 {
+    font-size: 32px;
+    color: var(--foreground);
+    margin-bottom: 20px;
+}
+
+.about-container .bold {
+    font-weight: bold;
+    color: var(--foreground);
+}
+
+#sub-text {
+    font-family: var(--font-space);
+    color: var(--primary);
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.about-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.about-card {
+    width: 250px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground);
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-card:hover {
+    background-color: var(--background-secondary);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary);
+}
+
+.about-card svg {
+    margin-bottom: 10px;
+    fill: var(--background);
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.about-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--foreground);
 }
