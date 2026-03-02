@@ -1,3 +1,63 @@
-*{
-    
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+aside {
+    width: 240px;
+    background-color: var(--background);
+    padding: 20px;
+    border-right: var(--border) 1px solid;
+}
+
+aside h4 {
+    font-size: 18px;
+    color: var(--foreground);
+    font: var(--font-space);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+aside nav button {
+    color: var(--foreground-light);
+    font-size: 14px;
+    font-family: var(--font-dm);
+    padding: 8px;
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+aside nav button:hover {
+    color: var(--primary);
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+aside nav button svg {
+    fill: var(--foreground-light);
+    padding: 3;
+}
+
+aside nav button:hover svg {
+    fill: var(--primary);
+}
+
+/* main */
+
+main {
+    background-color: var(--white);
+    width: 100%;
 }
