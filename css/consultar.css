@@ -61,3 +61,30 @@ main {
     background-color: var(--white);
     width: 100%;
 }
+
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.button-primary {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    gap: 5px;
+}
