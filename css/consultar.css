@@ -55,6 +55,28 @@ aside nav button:hover svg {
     fill: var(--primary);
 }
 
+aside nav button.active {
+    background-color: var(--background-secondary);
+    color: var(--primary);
+    border-radius: 6px;
+    position: relative;
+}
+
+aside nav button.active svg {
+    fill: var(--primary);
+}
+
+aside nav button.active::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
 /* main */
 
 main {
@@ -87,4 +109,13 @@ input[type="text"], input[type="email"], input[type="password"] {
     border: none;
     border-radius: 6px;
     gap: 5px;
+}
+
+main > div {
+    display: none;
+    padding: 40px;
+}
+
+main > div.active {
+    display: block;
 }
