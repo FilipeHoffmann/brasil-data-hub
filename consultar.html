@@ -81,7 +81,7 @@
                     <h1>Endereço CEP</h1>
                     <p>Consulte dados públicos de CEP em tempo real.</p>
                 </div>
-                <form class="form-cep" action="/consultar/cep" method="POST">
+                <form class="form-cep" action="/consultar_cep" method="POST">
                     <input type="text" name="cep" placeholder="Ex: 95625000" required pattern="\d{8}" title="Digite um CEP válido com 8 dígitos">
                     <button type="submit" class="button-primary">Consultar</button>
                 </form>
@@ -94,7 +94,7 @@
                     <h1>Empresas CNPJ</h1>
                     <p>Consulte dados públicos de CNPJ em tempo real.</p>
                 </div>
-                <form class="form-cnpj" action="/consultar/cnpj" method="POST">
+                <form class="form-cnpj" action="/consultar_cnpj" method="POST">
                     <input type="text" name="cnpj" placeholder="Ex: 12345678000190" required pattern="\d{14}" title="Digite um CNPJ válido">
                     <button type="submit" class="button-primary">Consultar</button>
                 </form>
@@ -107,7 +107,7 @@
                     <h1>Comunicação DDD</h1>
                     <p>Consulte dados públicos de DDD em tempo real.</p>
                 </div>
-                <form class="form-ddd" action="/consultar/ddd" method="POST">
+                <form class="form-ddd" action="/consultar_ddd" method="POST">
                     <input type="text" name="ddd" placeholder="Ex: 51" required pattern="\d{2}" title="Digite um DDD válido com 2 dígitos">
                     <button type="submit" class="button-primary">Consultar</button>
                 </form>
@@ -120,7 +120,7 @@
                     <h1>Financeiro Bancos</h1>
                     <p>Consulte dados públicos de bancos em tempo real.</p>
                 </div>
-                <form class="form-bancos" action="/consultar/bancos" method="POST">
+                <form class="form-bancos" action="/consultar_bancos" method="POST">
                     <input type="text" name="bank" placeholder="Ex: 1" required pattern="\d{2}" title="Digite o código do banco válido">
                     <button type="submit" class="button-primary">Consultar</button>
                 </form>
@@ -133,7 +133,7 @@
                     <h1>Feriados</h1>
                     <p>Consulte dados públicos de feriados em tempo real.</p>
                 </div>
-                <form class="form-feriados" action="/consultar/feriados" method="POST">
+                <form class="form-feriados" action="/consultar_feriados" method="POST">
                     <input type="text" name="year" placeholder="Ex: 2024" required pattern="\d{4}" title="Digite um ano válido com 4 dígitos">
                     <button type="submit" class="button-primary">Consultar</button>
                 </form>
@@ -174,4 +174,9 @@
 
     document.querySelector(".content-cep").classList.add("active");
 </script>
+<script type="module" src="/js/consultar_cep.js"></script>
+<script type="module" src="/js/consultar_cnpj.js"></script>
+<script type="module" src="/js/consultar_ddd.js"></script>
+<script type="module" src="/js/consultar_bancos.js"></script>
+<script type="module" src="/js/consultar_feriados.js"></script>
 </html>
